@@ -1,16 +1,9 @@
-
-# coding: utf-8
-
-# In[ ]:
-
 import requests
 import pprint
 import pandas as pd
 import re
 from xml.etree import ElementTree as ET
 
-
-# In[ ]:
 
 # From Wikidata, get everything that is a subclass* of geographic region (Q82794) 
 
@@ -27,7 +20,6 @@ classes_raw = requests.get(url, params = {'format': 'json', 'query': query})
 classes_json = classes_raw.json()
 
 
-# In[ ]:
 
 # From Wikidata, for each of those subclasses, get all records that 
 # are an instance of that subclass AND that have an LC authority ID. 
@@ -70,17 +62,11 @@ for x in classes:
             #y['mads'] = (child.tag)       
 
 df = pd.DataFrame(LCitems)
-df
-
-
-# In[ ]:
 
 # Save result to a file named "Wikidata.csv"
 
 df.to_csv('Wikidata.csv', encoding='utf-8')
 
-
-# In[ ]:
 
 # Retreive the RDF XML from id.loc.gov and add 
 # a column of MADS values. Print the LCID handles 
