@@ -2,7 +2,7 @@
 
 Scripts and Jupyter notebooks for testing, learning, and experimentation
 
-## Comparing geographic entities in Wikidata with their id.loc.gov equivalents
+## /idlocgov : Comparing geographic entities in Wikidata with their id.loc.gov equivalents
 
 These files are for practicing the id.loc.gov and wikidata apis. The goal is to compare geographic entities in Wikidata that have LC authority IDs, in an attempt to find mis-matches (e.g., Kern River the river and Kern River the Emmylou Harris song). In Wikidata, look for all items that are instances of any subclass (or subclass of subclass, etc.) of "geographic region" (Q82794) AND which have an LC authority ID. Then, go grab the LC authority record and check if its MADS tag is "Geographic" or otherwise. 
 
