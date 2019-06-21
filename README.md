@@ -1,6 +1,4 @@
-# sandboxes
 
-Scripts and Jupyter notebooks for testing, learning, and experimentation
 
 ## /idlocgov : Comparing geographic entities in Wikidata with their id.loc.gov equivalents
 
